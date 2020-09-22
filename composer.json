@@ -1,0 +1,13 @@
+{
+    "name": "accessibilityreport",
+    "type": "drupal-module",
+    "description": "Provides path for accessibility report",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/accessibility_report",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/accessibility_report",
+        "source": "http://cgit.drupalcode.org/accessibility_report"
+    }
+}
