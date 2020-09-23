@@ -1,0 +1,6 @@
+name: 'Web accessibility statement'
+type: module
+description: 'Provides path for accessibility statement'
+core: 8.x
+package: 'ITK'
+core_version_requirement: ^8 || ^9
