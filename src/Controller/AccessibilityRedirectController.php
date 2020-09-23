@@ -1,20 +1,20 @@
 <?php
 
-namespace Drupal\accessibility_report\Controller;
+namespace Drupal\web_accessibility_statement\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Accessibility report controller.
+ * Web accessibility statement controller.
  */
 class AccessibilityRedirectController extends ControllerBase {
 
   /**
-   * Redirects to accessibility report.
+   * Redirects to accessibility statement.
    */
   public function accessibilityRedirect() {
-    $accessibilityReportPath = \Drupal::config('accessibility_report.accessibilityadmin')->get('accessibility_report_path');
-    return new  \Drupal\Core\Routing\TrustedRedirectResponse($accessibilityReportPath);
+    $accessibilityStatementPath = \Drupal::config('web_accessibility_statement.accessibilityadmin')->get('web_accessibility_statement_url');
+    return new  \Drupal\Core\Routing\TrustedRedirectResponse($accessibilityStatementPath);
   }
 
 }

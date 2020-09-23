@@ -1,6 +1,6 @@
-accessibility_report.accessibility_admin_form:
+web_accessibility_statement.accessibility_admin_form:
   title: 'Accessibility administration'
-  route_name: accessibility_report.accessibility_admin_form
+  route_name: web_accessibility_statement.accessibility_admin_form
   description: 'Accessibility administration'
   parent: system.admin_config_system
   weight: 99
