@@ -5,7 +5,7 @@
  */
 
 /**
- * Admin form form web accessibility.
+ * Admin form for web accessibility.
  *
  * @param array $form
  *   The admin form.

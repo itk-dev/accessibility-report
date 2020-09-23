@@ -1,4 +1,4 @@
-name = Really Neat Widget
-description = Provides a really neat widget for your site's sidebar.
+name: Web accessibility statement
+description: Provides path for accessibility statement
 core = 7.x
 package: ITK
