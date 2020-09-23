@@ -1,13 +1,8 @@
 {
-    "name": "accessibilityreport",
+    "name": "itk-dev/webaccessibilitystatement",
     "type": "drupal-module",
-    "description": "Provides path for accessibility report",
+    "description": "Provides path for accessibility statement",
     "keywords": [
     ],
-    "homepage": "https://www.drupal.org/project/accessibility_report",
-    "minimum-stability": "dev",
-    "support": {
-        "issues": "https://www.drupal.org/project/issues/accessibility_report",
-        "source": "http://cgit.drupalcode.org/accessibility_report"
-    }
+    "minimum-stability": "dev"
 }
