@@ -5,11 +5,12 @@ web_accessibility_statement.redirect:
     _title: 'Redirect to accessibility report'
   requirements:
     _permission: 'access content'
+
 web_accessibility_statement.accessibility_admin_form:
-  path: '/admin/config/web_accessibility_statement/accessibilityadmin'
+  path: '/admin/config/web_accessibility_statement'
   defaults:
     _form: '\Drupal\web_accessibility_statement\Form\AccessibilityAdminForm'
-    _title: 'AccessibilityAdminForm'
+    _title: 'Web accessibility'
   requirements:
     _permission: 'access administration pages'
   options:
