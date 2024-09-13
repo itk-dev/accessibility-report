@@ -2,19 +2,43 @@
 
 namespace Drupal\web_accessibility_statement\Controller;
 
+use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Routing\TrustedRedirectResponse;
+use Drupal\web_accessibility_statement\Form\AccessibilityAdminForm;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Web accessibility statement controller.
  */
 class AccessibilityRedirectController extends ControllerBase {
 
+  public function __construct(
+    private readonly ImmutableConfig $config,
+  ) {
+  }
+
   /**
-   * Redirects to accessibility statement.
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    $config = $container->get('config.factory')->get(AccessibilityAdminForm::CONFIG_NAME);
+
+    return new static($config);
+  }
+
+  /**
+   * Redirects to web accessibility statement URL.
    */
   public function accessibilityRedirect() {
-    $accessibilityStatementPath = \Drupal::config('web_accessibility_statement.accessibilityadmin')->get('web_accessibility_statement_url');
-    return new  \Drupal\Core\Routing\TrustedRedirectResponse($accessibilityStatementPath);
+    $url = $this->config->get('url');
+
+    if (NULL === $url) {
+      throw new NotFoundHttpException();
+    }
+
+    return new TrustedRedirectResponse($url);
   }
 
 }
